@@ -1,0 +1,22 @@
+{
+  "name": "nereus",
+  "version": "1.0.0",
+  "description": "Video application created with Symfony framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagga68/nereus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jagga68/nereus/issues"
+  },
+  "homepage": "https://github.com/jagga68/nereus#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^1.6.1"
+  }
+}
