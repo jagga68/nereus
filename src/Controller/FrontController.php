@@ -24,6 +24,10 @@ class FrontController extends AbstractController
     public function videoList($id, CategoryTreeFrontPage $categories): Response
     {
         $categories->getCategoryListAndParent($id);
+<<<<<<< HEAD
+=======
+        dump($categories);
+>>>>>>> dac5a8eea6b909bf4b3033de87745ca25e4ebf31
         return $this->render('front/video_list.html.twig', [
             'subcategories' => $categories
         ]);
