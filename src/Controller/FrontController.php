@@ -9,6 +9,7 @@ use App\Entity\Category;
 use App\Entity\Video;
 use App\Utils\CategoryTreeFrontPage;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class FrontController extends AbstractController
 {
@@ -86,9 +87,19 @@ class FrontController extends AbstractController
     /**
      * @Route("/login", name="login")
      */
-    public function login(): Response
+    public function login(AuthenticationUtils $helper): Response
     {
-        return $this->render('front/login.html.twig');
+        return $this->render('front/login.html.twig', [
+            'error' => $helper->getLastAuthenticationError()
+        ]);
+    }
+
+    /**
+    * @Route("/logout", name="logout")
+    */
+    public function logout() : void
+    {
+        throw new \Exception('This should never be reached!');
     }
 
     /**
